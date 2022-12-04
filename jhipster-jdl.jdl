@@ -13,7 +13,6 @@ application {
     languages	[en],
     clientFramework angular
   }
-  entities *
 }
 
 application {
@@ -90,6 +89,12 @@ relationship OneToMany {
   Workout to WorkoutStep,
   BeginnerWorkout to WorkoutStep,
   IntermediateWorkout to WorkoutStep
+}
+
+deployment {
+  deploymentType docker-compose
+  appsFolders [nitetrain, training, billing]
+  dockerRepositoryName "kensai01"
 }
 
 service * with serviceImpl
