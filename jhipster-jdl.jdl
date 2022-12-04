@@ -10,7 +10,6 @@ application {
     prodDatabaseType mysql,
     buildTool gradle,
     cacheProvider ehcache,
-    blueprints [primeng-blueprint],
     languages	[en],
     clientFramework angular
   }
