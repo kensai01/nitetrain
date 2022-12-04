@@ -1,0 +1,97 @@
+
+application {
+  config {
+    baseName nitetrain,
+    applicationType gateway,
+    packageName com.nitetrain,
+    authenticationType jwt,
+    databaseType sql,
+    devDatabaseType mysql,
+    prodDatabaseType mysql,
+    buildTool gradle,
+    cacheProvider ehcache,
+    blueprints [primeng-blueprint],
+    languages	[en],
+    clientFramework angular
+  }
+  entities *
+}
+
+application {
+  config {
+    baseName billing,
+    applicationType microservice,
+    packageName com.billing,
+    authenticationType jwt,
+    databaseType sql,
+    devDatabaseType mysql,
+    prodDatabaseType mysql,
+    buildTool gradle,
+    cacheProvider hazelcast,
+    languages	[en]
+  }
+  entities Price
+  paginate * with pagination
+  dto * with mapstruct
+}
+
+application {
+  config {
+    baseName training,
+    applicationType microservice,
+    packageName com.training,
+    authenticationType jwt,
+    databaseType sql,
+    devDatabaseType mysql,
+    prodDatabaseType mysql,
+    buildTool gradle,
+    cacheProvider hazelcast,
+    languages	[en]
+  }
+  entities Workout, BeginnerWorkout,
+  	IntermediateWorkout, WorkoutStep
+  dto * with mapstruct
+}
+
+entity Price {
+	name String required,
+    location String required,
+    description String required,
+    cost BigDecimal min(0) max(10000)
+}
+
+entity Workout {
+	title String required,
+    description String required,
+    time Integer min(0) max(180),
+    videoId String,
+    scaling String
+}
+
+entity BeginnerWorkout {
+	description String required
+}
+
+entity IntermediateWorkout {
+	description String required
+}
+
+entity WorkoutStep {
+	title String required,
+    description String required,
+    stepNumber Integer required
+}
+
+relationship OneToOne {
+  BeginnerWorkout to Workout,
+  IntermediateWorkout to Workout
+}
+
+relationship OneToMany {
+  Workout to WorkoutStep,
+  BeginnerWorkout to WorkoutStep,
+  IntermediateWorkout to WorkoutStep
+}
+
+service * with serviceImpl
+    
