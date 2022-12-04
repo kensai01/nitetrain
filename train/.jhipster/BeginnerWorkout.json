@@ -1,0 +1,38 @@
+{
+  "applications": ["nitetrain", "train"],
+  "changelogDate": "20221204233450",
+  "clientRootFolder": "train",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "beginner_workout",
+  "fields": [
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "train",
+  "name": "BeginnerWorkout",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "workout",
+      "otherEntityRelationshipName": "beginnerWorkout",
+      "ownerSide": true,
+      "relationshipName": "workout",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "workoutStep",
+      "otherEntityRelationshipName": "beginnerWorkout",
+      "relationshipName": "workoutStep",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}
