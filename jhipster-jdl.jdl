@@ -13,6 +13,7 @@ application {
     languages	[en],
     clientFramework angular
   }
+  entities *
 }
 
 application {
@@ -46,8 +47,11 @@ application {
     cacheProvider hazelcast,
     languages	[en]
   }
-  entities Workout, BeginnerWorkout,
-  	IntermediateWorkout, WorkoutStep
+  entities Workout,
+  	BeginnerWorkout,
+  	IntermediateWorkout,
+    WorkoutStep
+  paginate * with pagination
   dto * with mapstruct
 }
 

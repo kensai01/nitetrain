@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="beginnerWorkout">
+      <h2 data-cy="beginnerWorkoutDetailsHeading">
+        <span jhiTranslate="nitetrainApp.beginnerWorkout.detail.title">Beginner Workout</span>
+      </h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ beginnerWorkout.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="nitetrainApp.beginnerWorkout.description">Description</span></dt>
+        <dd>
+          <span>{{ beginnerWorkout.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="nitetrainApp.beginnerWorkout.workout">Workout</span></dt>
+        <dd>
+          <div *ngIf="beginnerWorkout.workout">
+            <a [routerLink]="['/workout', beginnerWorkout.workout.id, 'view']">{{ beginnerWorkout.workout.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/beginner-workout', beginnerWorkout.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

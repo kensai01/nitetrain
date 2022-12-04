@@ -1,0 +1,13 @@
+{
+  "generator-jhipster": {
+    "appsFolders": ["nitetrain", "training", "billing"],
+    "clusteredDbApps": [],
+    "deploymentType": "docker-compose",
+    "directoryPath": "../",
+    "dockerRepositoryName": "kensai01",
+    "gatewayType": "SpringCloudGateway",
+    "jwtSecretKey": "MzBlMWE5MmZjYjhiMTFkNmFmODBlYzQ0MDVhMDVjZGYyN2E3Y2YyYjkzY2E2MjJmY2M4NzFmM2YyMDI3ZWFkOTdmYmEwYmEzNDgzOGNhMWMwMDkzMDM3YmQzYWJkYzg3NWMzNQ==",
+    "monitoring": "no",
+    "serviceDiscoveryType": "eureka"
+  }
+}

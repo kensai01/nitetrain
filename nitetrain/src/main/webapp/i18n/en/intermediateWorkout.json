@@ -1,0 +1,26 @@
+{
+  "nitetrainApp": {
+    "intermediateWorkout": {
+      "home": {
+        "title": "Intermediate Workouts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Intermediate Workout",
+        "createOrEditLabel": "Create or edit a Intermediate Workout",
+        "notFound": "No Intermediate Workouts found"
+      },
+      "created": "A new Intermediate Workout is created with identifier {{ param }}",
+      "updated": "A Intermediate Workout is updated with identifier {{ param }}",
+      "deleted": "A Intermediate Workout is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Intermediate Workout {{ id }}?"
+      },
+      "detail": {
+        "title": "Intermediate Workout"
+      },
+      "id": "ID",
+      "description": "Description",
+      "workout": "Workout",
+      "workoutStep": "Workout Step"
+    }
+  }
+}

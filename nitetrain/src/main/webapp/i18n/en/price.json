@@ -1,0 +1,27 @@
+{
+  "nitetrainApp": {
+    "price": {
+      "home": {
+        "title": "Prices",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Price",
+        "createOrEditLabel": "Create or edit a Price",
+        "notFound": "No Prices found"
+      },
+      "created": "A new Price is created with identifier {{ param }}",
+      "updated": "A Price is updated with identifier {{ param }}",
+      "deleted": "A Price is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Price {{ id }}?"
+      },
+      "detail": {
+        "title": "Price"
+      },
+      "id": "ID",
+      "name": "Name",
+      "location": "Location",
+      "description": "Description",
+      "cost": "Cost"
+    }
+  }
+}

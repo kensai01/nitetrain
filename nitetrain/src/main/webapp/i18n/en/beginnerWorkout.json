@@ -1,0 +1,26 @@
+{
+  "nitetrainApp": {
+    "beginnerWorkout": {
+      "home": {
+        "title": "Beginner Workouts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Beginner Workout",
+        "createOrEditLabel": "Create or edit a Beginner Workout",
+        "notFound": "No Beginner Workouts found"
+      },
+      "created": "A new Beginner Workout is created with identifier {{ param }}",
+      "updated": "A Beginner Workout is updated with identifier {{ param }}",
+      "deleted": "A Beginner Workout is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Beginner Workout {{ id }}?"
+      },
+      "detail": {
+        "title": "Beginner Workout"
+      },
+      "id": "ID",
+      "description": "Description",
+      "workout": "Workout",
+      "workoutStep": "Workout Step"
+    }
+  }
+}

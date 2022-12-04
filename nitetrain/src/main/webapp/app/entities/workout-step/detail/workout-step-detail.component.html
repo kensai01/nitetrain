@@ -1,0 +1,60 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="workoutStep">
+      <h2 data-cy="workoutStepDetailsHeading"><span jhiTranslate="nitetrainApp.workoutStep.detail.title">Workout Step</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ workoutStep.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="nitetrainApp.workoutStep.title">Title</span></dt>
+        <dd>
+          <span>{{ workoutStep.title }}</span>
+        </dd>
+        <dt><span jhiTranslate="nitetrainApp.workoutStep.description">Description</span></dt>
+        <dd>
+          <span>{{ workoutStep.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="nitetrainApp.workoutStep.stepNumber">Step Number</span></dt>
+        <dd>
+          <span>{{ workoutStep.stepNumber }}</span>
+        </dd>
+        <dt><span jhiTranslate="nitetrainApp.workoutStep.workout">Workout</span></dt>
+        <dd>
+          <div *ngIf="workoutStep.workout">
+            <a [routerLink]="['/workout', workoutStep.workout.id, 'view']">{{ workoutStep.workout.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="nitetrainApp.workoutStep.beginnerWorkout">Beginner Workout</span></dt>
+        <dd>
+          <div *ngIf="workoutStep.beginnerWorkout">
+            <a [routerLink]="['/beginner-workout', workoutStep.beginnerWorkout.id, 'view']">{{ workoutStep.beginnerWorkout.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="nitetrainApp.workoutStep.intermediateWorkout">Intermediate Workout</span></dt>
+        <dd>
+          <div *ngIf="workoutStep.intermediateWorkout">
+            <a [routerLink]="['/intermediate-workout', workoutStep.intermediateWorkout.id, 'view']">{{
+              workoutStep.intermediateWorkout.id
+            }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/workout-step', workoutStep.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

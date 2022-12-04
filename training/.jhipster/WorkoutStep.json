@@ -1,0 +1,53 @@
+{
+  "applications": ["training"],
+  "changelogDate": "20221204211251",
+  "clientRootFolder": "training",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "workout_step",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "stepNumber",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "training",
+  "name": "WorkoutStep",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "workout",
+      "otherEntityRelationshipName": "workoutStep",
+      "relationshipName": "workout",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "beginnerWorkout",
+      "otherEntityRelationshipName": "workoutStep",
+      "relationshipName": "beginnerWorkout",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "intermediateWorkout",
+      "otherEntityRelationshipName": "workoutStep",
+      "relationshipName": "intermediateWorkout",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}
