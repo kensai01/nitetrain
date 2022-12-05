@@ -1,6 +1,6 @@
 {
-  "applications": ["training"],
-  "changelogDate": "20221204211151",
+  "applications": ["nitetrain", "training"],
+  "changelogDate": "20221205001048",
   "clientRootFolder": "training",
   "databaseType": "sql",
   "dto": "mapstruct",
@@ -61,5 +61,5 @@
       "relationshipType": "one-to-one"
     }
   ],
-  "service": "serviceClass"
+  "service": "serviceImpl"
 }

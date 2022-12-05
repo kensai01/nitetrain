@@ -1,6 +1,6 @@
 {
-  "applications": ["billing"],
-  "changelogDate": "20221204210951",
+  "applications": ["nitetrain", "billing"],
+  "changelogDate": "20221205001048",
   "clientRootFolder": "billing",
   "databaseType": "sql",
   "dto": "mapstruct",
@@ -37,5 +37,5 @@
   "pagination": "pagination",
   "readOnly": false,
   "relationships": [],
-  "service": "serviceClass"
+  "service": "serviceImpl"
 }

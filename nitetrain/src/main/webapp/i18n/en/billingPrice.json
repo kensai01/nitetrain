@@ -1,0 +1,31 @@
+{
+  "nitetrainApp": {
+    "billingPrice": {
+      "home": {
+        "title": "Prices",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Price",
+        "createOrEditLabel": "Create or edit a Price",
+        "notFound": "No Prices found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Price {{ id }}?"
+      },
+      "detail": {
+        "title": "Price"
+      },
+      "id": "ID",
+      "name": "Name",
+      "location": "Location",
+      "description": "Description",
+      "cost": "Cost"
+    }
+  },
+  "billingApp": {
+    "billingPrice": {
+      "created": "A new Price is created with identifier {{ param }}",
+      "updated": "A Price is updated with identifier {{ param }}",
+      "deleted": "A Price is deleted with identifier {{ param }}"
+    }
+  }
+}

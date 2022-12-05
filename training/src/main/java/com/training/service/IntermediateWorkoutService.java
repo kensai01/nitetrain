@@ -1,83 +1,37 @@
 package com.training.service;
 
-import com.training.domain.IntermediateWorkout;
-import com.training.repository.IntermediateWorkoutRepository;
 import com.training.service.dto.IntermediateWorkoutDTO;
-import com.training.service.mapper.IntermediateWorkoutMapper;
 import java.util.Optional;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link IntermediateWorkout}.
+ * Service Interface for managing {@link com.training.domain.IntermediateWorkout}.
  */
-@Service
-@Transactional
-public class IntermediateWorkoutService {
-
-    private final Logger log = LoggerFactory.getLogger(IntermediateWorkoutService.class);
-
-    private final IntermediateWorkoutRepository intermediateWorkoutRepository;
-
-    private final IntermediateWorkoutMapper intermediateWorkoutMapper;
-
-    public IntermediateWorkoutService(
-        IntermediateWorkoutRepository intermediateWorkoutRepository,
-        IntermediateWorkoutMapper intermediateWorkoutMapper
-    ) {
-        this.intermediateWorkoutRepository = intermediateWorkoutRepository;
-        this.intermediateWorkoutMapper = intermediateWorkoutMapper;
-    }
-
+public interface IntermediateWorkoutService {
     /**
      * Save a intermediateWorkout.
      *
      * @param intermediateWorkoutDTO the entity to save.
      * @return the persisted entity.
      */
-    public IntermediateWorkoutDTO save(IntermediateWorkoutDTO intermediateWorkoutDTO) {
-        log.debug("Request to save IntermediateWorkout : {}", intermediateWorkoutDTO);
-        IntermediateWorkout intermediateWorkout = intermediateWorkoutMapper.toEntity(intermediateWorkoutDTO);
-        intermediateWorkout = intermediateWorkoutRepository.save(intermediateWorkout);
-        return intermediateWorkoutMapper.toDto(intermediateWorkout);
-    }
+    IntermediateWorkoutDTO save(IntermediateWorkoutDTO intermediateWorkoutDTO);
 
     /**
-     * Update a intermediateWorkout.
+     * Updates a intermediateWorkout.
      *
-     * @param intermediateWorkoutDTO the entity to save.
+     * @param intermediateWorkoutDTO the entity to update.
      * @return the persisted entity.
      */
-    public IntermediateWorkoutDTO update(IntermediateWorkoutDTO intermediateWorkoutDTO) {
-        log.debug("Request to update IntermediateWorkout : {}", intermediateWorkoutDTO);
-        IntermediateWorkout intermediateWorkout = intermediateWorkoutMapper.toEntity(intermediateWorkoutDTO);
-        intermediateWorkout = intermediateWorkoutRepository.save(intermediateWorkout);
-        return intermediateWorkoutMapper.toDto(intermediateWorkout);
-    }
+    IntermediateWorkoutDTO update(IntermediateWorkoutDTO intermediateWorkoutDTO);
 
     /**
-     * Partially update a intermediateWorkout.
+     * Partially updates a intermediateWorkout.
      *
      * @param intermediateWorkoutDTO the entity to update partially.
      * @return the persisted entity.
      */
-    public Optional<IntermediateWorkoutDTO> partialUpdate(IntermediateWorkoutDTO intermediateWorkoutDTO) {
-        log.debug("Request to partially update IntermediateWorkout : {}", intermediateWorkoutDTO);
-
-        return intermediateWorkoutRepository
-            .findById(intermediateWorkoutDTO.getId())
-            .map(existingIntermediateWorkout -> {
-                intermediateWorkoutMapper.partialUpdate(existingIntermediateWorkout, intermediateWorkoutDTO);
-
-                return existingIntermediateWorkout;
-            })
-            .map(intermediateWorkoutRepository::save)
-            .map(intermediateWorkoutMapper::toDto);
-    }
+    Optional<IntermediateWorkoutDTO> partialUpdate(IntermediateWorkoutDTO intermediateWorkoutDTO);
 
     /**
      * Get all the intermediateWorkouts.
@@ -85,31 +39,20 @@ public class IntermediateWorkoutService {
      * @param pageable the pagination information.
      * @return the list of entities.
      */
-    @Transactional(readOnly = true)
-    public Page<IntermediateWorkoutDTO> findAll(Pageable pageable) {
-        log.debug("Request to get all IntermediateWorkouts");
-        return intermediateWorkoutRepository.findAll(pageable).map(intermediateWorkoutMapper::toDto);
-    }
+    Page<IntermediateWorkoutDTO> findAll(Pageable pageable);
 
     /**
-     * Get one intermediateWorkout by id.
+     * Get the "id" intermediateWorkout.
      *
      * @param id the id of the entity.
      * @return the entity.
      */
-    @Transactional(readOnly = true)
-    public Optional<IntermediateWorkoutDTO> findOne(Long id) {
-        log.debug("Request to get IntermediateWorkout : {}", id);
-        return intermediateWorkoutRepository.findById(id).map(intermediateWorkoutMapper::toDto);
-    }
+    Optional<IntermediateWorkoutDTO> findOne(Long id);
 
     /**
-     * Delete the intermediateWorkout by id.
+     * Delete the "id" intermediateWorkout.
      *
      * @param id the id of the entity.
      */
-    public void delete(Long id) {
-        log.debug("Request to delete IntermediateWorkout : {}", id);
-        intermediateWorkoutRepository.deleteById(id);
-    }
+    void delete(Long id);
 }

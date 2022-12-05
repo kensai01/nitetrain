@@ -1,27 +1,27 @@
 export const EntityNavbarItems = [
   {
-    name: 'Price',
-    route: 'price',
-    translationKey: 'global.menu.entities.price',
+    name: 'Workout',
+    route: 'workout',
+    translationKey: 'global.menu.entities.trainingWorkout',
   },
   {
     name: 'BeginnerWorkout',
     route: 'beginner-workout',
-    translationKey: 'global.menu.entities.beginnerWorkout',
-  },
-  {
-    name: 'IntermediateWorkout',
-    route: 'intermediate-workout',
-    translationKey: 'global.menu.entities.intermediateWorkout',
-  },
-  {
-    name: 'Workout',
-    route: 'workout',
-    translationKey: 'global.menu.entities.workout',
+    translationKey: 'global.menu.entities.trainingBeginnerWorkout',
   },
   {
     name: 'WorkoutStep',
     route: 'workout-step',
-    translationKey: 'global.menu.entities.workoutStep',
+    translationKey: 'global.menu.entities.trainingWorkoutStep',
+  },
+  {
+    name: 'Price',
+    route: 'price',
+    translationKey: 'global.menu.entities.billingPrice',
+  },
+  {
+    name: 'IntermediateWorkout',
+    route: 'intermediate-workout',
+    translationKey: 'global.menu.entities.trainingIntermediateWorkout',
   },
 ];

@@ -1,6 +1,7 @@
 {
   "applications": ["nitetrain", "training"],
-  "changelogDate": "20221204211151",
+  "changelogDate": "20221205001048",
+  "clientRootFolder": "training",
   "databaseType": "sql",
   "dto": "mapstruct",
   "embedded": false,
@@ -34,6 +35,7 @@
   ],
   "fluentMethods": true,
   "jpaMetamodelFiltering": false,
+  "microserviceName": "training",
   "name": "Workout",
   "pagination": "pagination",
   "readOnly": false,
@@ -59,5 +61,5 @@
       "relationshipType": "one-to-one"
     }
   ],
-  "service": "serviceClass"
+  "service": "serviceImpl"
 }

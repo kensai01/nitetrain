@@ -5,29 +5,30 @@ import { RouterModule } from '@angular/router';
   imports: [
     RouterModule.forChild([
       {
-        path: 'price',
-        data: { pageTitle: 'nitetrainApp.price.home.title' },
-        loadChildren: () => import('./price/price.module').then(m => m.PriceModule),
+        path: 'workout',
+        data: { pageTitle: 'nitetrainApp.trainingWorkout.home.title' },
+        loadChildren: () => import('./training/workout/workout.module').then(m => m.TrainingWorkoutModule),
       },
       {
         path: 'beginner-workout',
-        data: { pageTitle: 'nitetrainApp.beginnerWorkout.home.title' },
-        loadChildren: () => import('./beginner-workout/beginner-workout.module').then(m => m.BeginnerWorkoutModule),
-      },
-      {
-        path: 'intermediate-workout',
-        data: { pageTitle: 'nitetrainApp.intermediateWorkout.home.title' },
-        loadChildren: () => import('./intermediate-workout/intermediate-workout.module').then(m => m.IntermediateWorkoutModule),
-      },
-      {
-        path: 'workout',
-        data: { pageTitle: 'nitetrainApp.workout.home.title' },
-        loadChildren: () => import('./workout/workout.module').then(m => m.WorkoutModule),
+        data: { pageTitle: 'nitetrainApp.trainingBeginnerWorkout.home.title' },
+        loadChildren: () => import('./training/beginner-workout/beginner-workout.module').then(m => m.TrainingBeginnerWorkoutModule),
       },
       {
         path: 'workout-step',
-        data: { pageTitle: 'nitetrainApp.workoutStep.home.title' },
-        loadChildren: () => import('./workout-step/workout-step.module').then(m => m.WorkoutStepModule),
+        data: { pageTitle: 'nitetrainApp.trainingWorkoutStep.home.title' },
+        loadChildren: () => import('./training/workout-step/workout-step.module').then(m => m.TrainingWorkoutStepModule),
+      },
+      {
+        path: 'price',
+        data: { pageTitle: 'nitetrainApp.billingPrice.home.title' },
+        loadChildren: () => import('./billing/price/price.module').then(m => m.BillingPriceModule),
+      },
+      {
+        path: 'intermediate-workout',
+        data: { pageTitle: 'nitetrainApp.trainingIntermediateWorkout.home.title' },
+        loadChildren: () =>
+          import('./training/intermediate-workout/intermediate-workout.module').then(m => m.TrainingIntermediateWorkoutModule),
       },
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ]),

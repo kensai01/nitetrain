@@ -48,7 +48,7 @@ spring:
   liquibase:
     # Remove 'faker' if you do not want the sample data to be loaded automatically
     contexts: dev, faker
-    url: jdbc:mysql://localhost:3306/nitetrain?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3308/nitetrain?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
   mail:
     host: localhost
     port: 25
@@ -57,7 +57,7 @@ spring:
   messages:
     cache-duration: PT1S # 1 second, see the ISO 8601 standard
   r2dbc:
-    url: r2dbc:mariadb://localhost:3306/nitetrain?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+    url: r2dbc:mariadb://localhost:3308/nitetrain?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
     username: root
     password:
   thymeleaf:
@@ -109,7 +109,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
-        base64-secret: N2NjMzI1MGRkMGY1YmZlZTU5OTEwODdiZTNkNTEwMzg3Yjc0NzAzMGQ1M2Q5Y2RiYTIyY2NkZTI1NTVjMDI4MDNiNDIzMTc1MWIyNTQ2NzlhMTE5ZTFkNWYwZjM0MzNkYmI1NDY5NDY5Mjc1MzIxYjE2YWI3ZWZiM2Y2N2Q1YjI=
+        base64-secret: OGMwZDA1ZjUzZWIxOTIwYmUzZDA1YWU3NjE3Y2MxMTA3MjY0MmU5Y2U2ZDVlNjQ4Mzc3MmNiYmIzMDI2OTk4M2M0YWRiNGFlOGY4ZDQxMGY1NWY1OTUzNjZlZGUzZTNhNzEwZjFjNGYzYmZmY2E1YzY2NmMxMjI3ZTMzMzk3ZDc=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000

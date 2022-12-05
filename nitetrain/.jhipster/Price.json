@@ -1,6 +1,7 @@
 {
   "applications": ["nitetrain", "billing"],
-  "changelogDate": "20221204210951",
+  "changelogDate": "20221205001348",
+  "clientRootFolder": "billing",
   "databaseType": "sql",
   "dto": "mapstruct",
   "embedded": false,
@@ -31,9 +32,10 @@
   ],
   "fluentMethods": true,
   "jpaMetamodelFiltering": false,
+  "microserviceName": "billing",
   "name": "Price",
   "pagination": "pagination",
   "readOnly": false,
   "relationships": [],
-  "service": "serviceClass"
+  "service": "serviceImpl"
 }

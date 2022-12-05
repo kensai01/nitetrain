@@ -7,11 +7,11 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
-        "price": "Price",
-        "beginnerWorkout": "Beginner Workout",
-        "intermediateWorkout": "Intermediate Workout",
-        "workout": "Workout",
-        "workoutStep": "Workout Step",
+        "trainingWorkout": "Workout",
+        "trainingBeginnerWorkout": "Beginner Workout",
+        "trainingWorkoutStep": "Workout Step",
+        "billingPrice": "Price",
+        "trainingIntermediateWorkout": "Intermediate Workout",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

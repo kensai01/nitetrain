@@ -6,7 +6,7 @@
     "directoryPath": "../",
     "dockerRepositoryName": "kensai01",
     "gatewayType": "SpringCloudGateway",
-    "jwtSecretKey": "MzBlMWE5MmZjYjhiMTFkNmFmODBlYzQ0MDVhMDVjZGYyN2E3Y2YyYjkzY2E2MjJmY2M4NzFmM2YyMDI3ZWFkOTdmYmEwYmEzNDgzOGNhMWMwMDkzMDM3YmQzYWJkYzg3NWMzNQ==",
+    "jwtSecretKey": "ZDI1NzFjYzMyNzQyMGZmNWI0MDVjYWI2MGI2ZTI0Nzk1MmE2MWI1YzcxMjc0ODVkZWM3NjJjODk2MmZiMTI0MjBhZjQyMDExOTIxOTBiNWY2ZjI1ZDlkOTQ3YWVjMTVjY2NmOQ==",
     "monitoring": "no",
     "serviceDiscoveryType": "eureka"
   }

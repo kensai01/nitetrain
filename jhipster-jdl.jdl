@@ -11,7 +11,8 @@ application {
     buildTool gradle,
     cacheProvider ehcache,
     languages	[en],
-    clientFramework angular
+    clientFramework angular,
+    serverPort 8080
   }
   entities *
 }
@@ -27,12 +28,16 @@ application {
     prodDatabaseType mysql,
     buildTool gradle,
     cacheProvider hazelcast,
-    languages	[en]
+    languages	[en],
+    serverPort 8081
   }
   entities Price
-  paginate * with pagination
-  dto * with mapstruct
 }
+
+paginate * with pagination
+dto * with mapstruct
+microservice 
+ Price with billing
 
 application {
   config {
@@ -45,15 +50,22 @@ application {
     prodDatabaseType mysql,
     buildTool gradle,
     cacheProvider hazelcast,
-    languages	[en]
+    languages	[en],
+    serverPort 8082
   }
   entities Workout,
   	BeginnerWorkout,
   	IntermediateWorkout,
     WorkoutStep
-  paginate * with pagination
-  dto * with mapstruct
 }
+
+paginate * with pagination
+dto * with mapstruct
+microservice 
+  Workout,
+  BeginnerWorkout,
+  IntermediateWorkout,
+  WorkoutStep with training
 
 entity Price {
 	name String required,

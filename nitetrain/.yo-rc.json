@@ -2,6 +2,18 @@
   "generator-jhipster": {
     "applicationIndex": 0,
     "applicationType": "gateway",
+    "applications": {
+      "billing": {
+        "applicationIndex": 1,
+        "clientFramework": "no",
+        "serverPort": "8081"
+      },
+      "training": {
+        "applicationIndex": 2,
+        "clientFramework": "no",
+        "serverPort": "8082"
+      }
+    },
     "authenticationType": "jwt",
     "baseName": "nitetrain",
     "blueprints": [],
@@ -11,7 +23,7 @@
     "clientPackageManager": "npm",
     "clientTheme": "none",
     "clientThemeVariant": "",
-    "creationTimestamp": 1670188133294,
+    "creationTimestamp": 1670198988265,
     "databaseType": "sql",
     "devDatabaseType": "mysql",
     "devServerPort": 4200,
@@ -20,13 +32,14 @@
     "enableHibernateCache": false,
     "enableSwaggerCodegen": false,
     "enableTranslation": true,
-    "entities": ["Price", "BeginnerWorkout", "IntermediateWorkout", "Workout", "WorkoutStep"],
+    "entities": ["Workout", "BeginnerWorkout", "WorkoutStep", "Price", "IntermediateWorkout"],
     "entitySuffix": "",
     "gradleEnterpriseHost": "",
     "jhiPrefix": "jhi",
     "jhipsterVersion": "7.9.3",
-    "jwtSecretKey": "N2NjMzI1MGRkMGY1YmZlZTU5OTEwODdiZTNkNTEwMzg3Yjc0NzAzMGQ1M2Q5Y2RiYTIyY2NkZTI1NTVjMDI4MDNiNDIzMTc1MWIyNTQ2NzlhMTE5ZTFkNWYwZjM0MzNkYmI1NDY5NDY5Mjc1MzIxYjE2YWI3ZWZiM2Y2N2Q1YjI=",
+    "jwtSecretKey": "OGMwZDA1ZjUzZWIxOTIwYmUzZDA1YWU3NjE3Y2MxMTA3MjY0MmU5Y2U2ZDVlNjQ4Mzc3MmNiYmIzMDI2OTk4M2M0YWRiNGFlOGY4ZDQxMGY1NWY1OTUzNjZlZGUzZTNhNzEwZjFjNGYzYmZmY2E1YzY2NmMxMjI3ZTMzMzk3ZDc=",
     "languages": ["en"],
+    "lastLiquibaseTimestamp": 1670199288000,
     "messageBroker": false,
     "monorepository": true,
     "nativeLanguage": "en",
