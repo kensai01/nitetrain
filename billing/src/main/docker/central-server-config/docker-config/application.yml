@@ -14,3 +14,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://admin:${jhipster.registry.password}@jhipster-registry:8761/eureka/
+
+spring:
+  datasource:
+    password: YMqCDSqxzZkCYrQmpNp9W8dNuSE6fcWqyc8e32CN52DKhY229dXjPJCQdfq4h68Q
